@@ -1,0 +1,23 @@
+// Tailwind library, tailwind-utilities is imported in another file
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "mixins/**/*.scss";
+
+@import "includes/colors";
+@import "includes/typography";
+@import "includes/buttons";
+@import "includes/inputs";
+
+@import "base";
+
+@import "header/**/*.scss";
+@import "loop/**/*.scss";
+@import "blocks/**/*.scss";
+@import "components/**/*.scss";
+@import "woocommerce/**/*.scss";
+@import "update-availability/**/*.scss";
+
+@import "gravity-forms/reset";
+@import "gravity-forms/styles";

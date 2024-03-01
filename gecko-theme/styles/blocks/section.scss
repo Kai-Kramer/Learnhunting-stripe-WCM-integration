@@ -1,0 +1,101 @@
+.gecko-theme-section {
+	@apply prose;
+	@apply relative max-w-full bg-no-repeat;
+
+	&[data-is-preview="true"] {
+		border: 1px dashed $color-primary;
+	}
+	&[data-is-preview="true"] &__inner {
+		border: 1px dashed $color-secondary;
+	}
+
+	&[data-padding="none"] {
+		@apply p-0;
+	}
+	&[data-padding="default"] {
+		@apply p-4;
+	}
+	&[data-padding="extra"] {
+		@apply p-12;
+	}
+	&[data-rounded-frame="true"][data-padding="default"] {
+		@apply p-8;
+	}
+	&[data-rounded-frame="true"][data-padding="extra"] {
+		@apply p-16;
+	}
+	&[data-rounded-corners="true"] {
+		@apply overflow-hidden rounded;
+	}
+
+	// Background overlay, optional
+	&__overlay {
+		@apply absolute left-0 top-0 z-10 h-full w-full;
+	}
+
+	&__rounded-frame {
+		@apply absolute left-4 top-4 z-20 h-[calc(100%-2rem)] w-[calc(100%-2rem)] rounded-tl-3xl rounded-br-3xl bg-transparent;
+
+		box-shadow: 0 0 0 10rem $color-background;
+	}
+	&[data-rounded-frame="true"] {
+		@apply overflow-hidden;
+	}
+
+	&[data-dismissable="true"] {
+		@apply hidden;
+	}
+
+	&__dismiss-button {
+		@apply absolute
+		right-2
+		top-2
+		z-[999999]
+		m-0
+		flex
+		h-12
+		w-12
+		items-center
+		justify-center
+		rounded-full
+		bg-stone-900/50
+		p-0
+		leading-none
+		hover:rounded-full;
+
+		svg {
+			@apply block
+			h-6
+			w-6;
+
+			path {
+				fill: #fff;
+			}
+		}
+	}
+
+	// Inner wrapper used to contain content to fixed widths
+	&__inner {
+		@include row;
+		@apply relative z-30 py-0;
+
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&[data-row-width="full-width"] &__inner {
+		@apply max-w-full;
+	}
+	&[data-row-width="wide"] &__inner {
+		@apply max-w-6xl;
+	}
+	&[data-row-width="medium"] &__inner {
+		@apply max-w-5xl;
+	}
+	&[data-row-width="narrow"] &__inner {
+		@apply max-w-3xl;
+	}
+
+	&[data-padding="none"] &__inner {
+		@apply p-0;
+	}
+}

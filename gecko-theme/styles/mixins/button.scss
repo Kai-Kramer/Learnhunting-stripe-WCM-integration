@@ -1,0 +1,40 @@
+@mixin button {
+	@apply inline-block
+		cursor-pointer
+        rounded-none
+        border-none
+        bg-secondary
+        px-10
+        py-5
+		font-bold
+		uppercase
+        text-background
+        no-underline
+        transition-all
+        duration-100
+		ease-in-out;
+
+	&:hover {
+		@apply rounded-tl-3xl rounded-br-3xl bg-secondary-dark;
+	}
+}
+
+@mixin outlineButton {
+	@apply bg-transparent text-background transition-all duration-100;
+
+	box-shadow: 0 0 0 3px inset $color-primary;
+
+	&:hover {
+		@apply bg-primary-dark;
+
+		box-shadow: 0 0 0 3px inset $color-primary-dark;
+	}
+}
+
+@mixin primaryButton {
+	@apply bg-primary;
+
+	&:hover {
+		@apply bg-primary-dark;
+	}
+}

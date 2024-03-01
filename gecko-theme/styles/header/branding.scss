@@ -1,0 +1,36 @@
+.menu-branding {
+	@apply p-4;
+
+	&__site-title {
+		@apply block text-2xl font-bold;
+	}
+	&:hover &__site-title {
+		@apply underline;
+	}
+
+	&__site-tagline {
+		@apply block;
+	}
+
+	&__logo {
+		@apply flex items-center content-start w-[200px] sm:w-[280px];
+
+		img,
+		svg {
+			@apply block w-auto max-h-full;
+
+			path {
+				@apply transition-colors;
+			}
+		}
+
+		&:hover svg path.bg-color {
+			@apply fill-tertiary-dark;
+		}
+	}
+}
+body.home.scrolled .menu-branding__logo svg {
+	.bg-color {
+		// @apply fill-tertiary;
+	}
+}

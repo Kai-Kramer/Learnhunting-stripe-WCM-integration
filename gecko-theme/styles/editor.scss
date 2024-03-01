@@ -1,0 +1,70 @@
+// @import "tailwindcss/base";
+// @import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "mixins/**/*.scss";
+
+@import "includes/colors";
+@import "includes/typography";
+
+@font-face {
+	font-family: "Bio Sans";
+	src: url("fonts/BioSans-Regular.woff2") format("woff2"),
+		url("fonts/BioSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Bio Sans";
+	src: url("fonts/BioSans-Light.woff2") format("woff2"),
+		url("fonts/BioSans-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Bio Sans";
+	src: url("fonts/BioSans-Bold.woff2") format("woff2"),
+		url("fonts/BioSans-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+$font-body: "Bio Sans", sans-serif;
+
+.edit-post-visual-editor__post-title-wrapper h1,
+.is-root-container.block-editor-block-list__layout {
+	font-family: $font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+@import "header/**/*.scss";
+@import "loop/**/*.scss";
+@import "blocks/**/*.scss";
+@import "components/**/*.scss";
+
+// @import "gravity-forms/reset";
+// @import "gravity-forms/styles";
+
+.wp-block-button {
+	.wp-block-button__link {
+		@include button;
+	}
+
+	&.is-style-outline .wp-block-button__link {
+		@include outlineButton;
+	}
+
+	&.is-style-primary .wp-block-button__link {
+		@include primaryButton;
+	}
+}

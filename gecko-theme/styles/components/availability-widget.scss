@@ -1,0 +1,80 @@
+.learnhunting-availability-widget {
+	@apply relative
+    mt-4
+    flex
+    items-center
+    justify-start
+    gap-4
+    rounded
+    bg-stone-100
+    p-6
+    text-center
+    hover:bg-stone-200;
+
+	&__dot-wrapper {
+		@apply relative
+        h-8
+        w-16
+        cursor-pointer
+        rounded-full
+        bg-stone-300
+        p-1
+        transition;
+	}
+
+	&__dot-icon {
+		@apply absolute
+        top-1
+        left-1
+        z-20
+        h-6
+        w-6
+        transform
+        rounded-full
+        bg-stone-600
+        transition;
+
+		svg {
+			@apply absolute
+            left-1/2
+            top-1/2
+            h-6
+            w-6
+            -translate-x-1/2
+            -translate-y-1/2
+            scale-0
+            transform
+            opacity-0
+            transition;
+
+			path {
+				@apply fill-white;
+			}
+		}
+	}
+
+	&[data-is-available="true"] &__dot-wrapper &__dot-icon {
+		@apply translate-x-8
+        bg-primary;
+
+		svg {
+			@apply scale-100
+            opacity-100;
+		}
+	}
+
+	&__label {
+		@apply relative
+        flex
+        cursor-pointer
+        flex-col
+        items-center
+        text-xl
+        font-bold
+        text-stone-600
+        transition;
+	}
+	&[data-is-available="true"] &__label {
+		@apply text-tertiary;
+	}
+}

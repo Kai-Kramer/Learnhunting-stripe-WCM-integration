@@ -1,0 +1,49 @@
+.woocommerce.single-product #content,
+.woocommerce.single-product,
+.woocommerce-page.single-product #content,
+.woocommerce-page.single-product {
+	div.product {
+		@apply px-8;
+	}
+
+	div.product div.summary {
+		@include row;
+		@apply float-none w-auto px-0 pt-8 pb-12;
+	}
+}
+
+main section .woocommerce {
+	div.product div.summary {
+		@include row;
+		@apply float-none w-auto px-0 pt-8 pb-12;
+
+		.price {
+			@apply m-0
+			my-4
+			block
+			text-lg
+			font-bold
+			text-primary;
+		}
+	}
+}
+
+body.page-id-260 .woocommerce div.product form.cart div.quantity {
+	@apply sr-only;
+}
+
+.wp-block-column .woocommerce div.product div.summary {
+	@apply mb-0 py-4;
+
+	.product_title {
+		@apply mb-4;
+	}
+
+	.first-payment-date {
+		display: none;
+	}
+
+	.cart {
+		@apply mb-0;
+	}
+}

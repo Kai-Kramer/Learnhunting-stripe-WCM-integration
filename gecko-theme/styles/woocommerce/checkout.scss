@@ -1,0 +1,38 @@
+.woocommerce form .form-row .input-checkbox {
+	@apply inline-block;
+}
+
+.woocommerce form .form-row .woocommerce-input-wrapper .description {
+	@apply m-0
+	mt-2
+	border-none
+	bg-background
+	p-0
+	py-2
+	text-sm
+	text-foreground;
+
+	&::before {
+		@apply hidden;
+	}
+
+	display: block !important;
+	height: auto !important;
+}
+
+.woocommerce-error::before,
+.woocommerce-info::before,
+.woocommerce-message::before {
+	@apply hidden;
+}
+
+.woocommerce-checkout #order_review_heading {
+	@apply hidden;
+}
+.woocommerce-checkout #order_review {
+	@apply pt-4;
+
+	> .woocommerce-checkout-review-order-table {
+		@apply hidden;
+	}
+}

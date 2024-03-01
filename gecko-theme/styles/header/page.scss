@@ -1,0 +1,33 @@
+.gecko-page-header {
+	@apply relative px-8 bg-cover bg-no-repeat bg-center mb-4;
+
+	background-image: url("../images/page-header.jpg");
+
+	&::before {
+		@apply absolute z-10 left-0 top-0 w-full h-full rounded-tl-3xl rounded-br-3xl bg-black/50;
+
+		content: "";
+	}
+
+	&__frame-wrapper {
+		@apply absolute z-20 left-0 top-0 w-full h-full overflow-hidden;
+	}
+	&__frame {
+		@apply absolute z-10 left-4 top-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] rounded-tl-3xl rounded-br-3xl;
+
+		box-shadow: 0 0 0 10rem $color-background;
+	}
+
+	&__row {
+		@include row;
+		@apply relative z-30 px-0 pt-32 sm:pt-48 pb-12 sm:pb-14 md:pb-16;
+
+		h1 {
+			@apply text-white text-3xl sm:text-4xl md:text-5xl font-bold uppercase sm:w-2/3 md:w-1/2;
+		}
+	}
+
+	&__logos {
+		@apply absolute right-0 bottom-0 translate-y-8 sm:translate-y-6;
+	}
+}

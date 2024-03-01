@@ -1,0 +1,34 @@
+.gecko-footer {
+	@apply p-4 py-10 bg-tertiary text-background;
+
+	&__row {
+		@include row;
+		@apply flex flex-col md:flex-row items-center px-0 gap-6 md:gap-16;
+	}
+
+	&__logo {
+		svg {
+			@apply block w-52;
+		}
+	}
+
+	&__nav {
+		@apply grow;
+
+		.menu {
+			@apply flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center md:justify-end flex-wrap;
+
+			> li {
+				@apply block;
+
+				> a {
+					@apply block px-4 py-2 font-bold uppercase hover:underline;
+				}
+			}
+		}
+
+		.sub-menu {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+body {
+	.gform_wrapper {
+		.gform_fields,
+		.gform_fields.top-label,
+		.gform_fields.bottom-label {
+			@apply list-none;
+
+			.gfield {
+				@apply mb-6 w-full;
+
+				.gfield_label {
+					@apply block font-bold mb-1;
+				}
+
+				.ginput_container {
+					@apply w-full flex justify-start items-center gap-4 m-0 p-0;
+
+					[type="text"],
+					[type="email"],
+					[type="url"],
+					[type="password"],
+					[type="number"],
+					[type="date"],
+					[type="datetime-local"],
+					[type="month"],
+					[type="search"],
+					[type="tel"],
+					[type="time"],
+					[type="week"],
+					[multiple],
+					textarea,
+					select {
+						@apply block px-6 py-3 w-full bg-gray-dark shadow-lg shadow-none rounded border-2 border-gray-200 focus:border-primary focus:shadow-slate-400/30 outline-none ring-0 transition;
+					}
+				}
+			}
+
+			.ginput_complex span label {
+				@apply mb-1 text-sm;
+			}
+		}
+
+		[aria-invalid="true"] + label,
+		label + [aria-invalid="true"],
+		.gfield_error legend,
+		.gfield_error label,
+		.gfield_error .gfield_repeater_cell label,
+		.gfield_validation_message,
+		.validation_message {
+			@apply text-red-700 border-red-700 rounded-md;
+		}
+
+		.gfield_validation_message,
+		.gform_wrapper .validation_message {
+			@apply bg-gray-dark;
+		}
+
+		&.gform_validation_error .gform_validation_errors {
+			@apply bg-gray-dark rounded-md border-red-700 shadow-none;
+
+			// border-radius: 5px;
+			// border: 1.5px solid #c02b0a;
+			// box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.11),
+			// 	0px 0px 4px rgba(18, 25, 97, 0.0405344);
+			// margin-bottom: 8px;
+			// margin-top: 8px;
+			// padding: 16px 16px 16px 48px;
+			// position: relative;
+			// width: 100%;
+
+			> h2 {
+				@apply text-red-700;
+			}
+		}
+	}
+
+	.gform_footer input[type="submit"] {
+		@apply bg-secondary text-background font-bold w-full uppercase;
+	}
+}

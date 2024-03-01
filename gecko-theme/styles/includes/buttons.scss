@@ -1,0 +1,56 @@
+button,
+.button[href],
+input[type="submit"] {
+	@include button;
+}
+
+.gecko-theme-section__inner .wp-block-buttons {
+	@apply flex gap-4;
+}
+
+.wp-block-button {
+	a.wp-block-button__link {
+		@include button;
+	}
+
+	&.is-style-outline a.wp-block-button__link {
+		@include outlineButton;
+	}
+
+	&.is-style-primary a.wp-block-button__link {
+		@include primaryButton;
+	}
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	@include button;
+
+	&:hover {
+		@apply text-background;
+	}
+
+	&.disabled,
+	&:disabled,
+	&:disabled[disabled] {
+		@apply px-10
+        py-5
+		text-background;
+
+		&:hover {
+			@apply bg-secondary
+			text-background;
+		}
+	}
+
+	&.alt {
+		@include button;
+		@apply bg-primary;
+
+		&:hover {
+			@apply text-background;
+		}
+	}
+}

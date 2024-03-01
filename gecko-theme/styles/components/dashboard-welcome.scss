@@ -1,0 +1,41 @@
+.learnhunting-dashboard-welcome {
+	@apply mb-4
+    flex
+    items-center
+    gap-4;
+
+	&__image {
+		@apply flex
+        h-12
+        w-12
+        flex-col
+        items-center
+        justify-center
+        rounded-full
+        bg-cover
+        bg-center;
+	}
+
+	&__monogram {
+		@apply flex
+        h-12
+        w-12
+        flex-col
+        items-center
+        justify-center
+        rounded-full
+        bg-secondary
+        text-xl
+        text-white;
+	}
+
+	&__content {
+		@apply leading-tight;
+
+		strong {
+			@apply block
+            text-lg
+            leading-tight;
+		}
+	}
+}

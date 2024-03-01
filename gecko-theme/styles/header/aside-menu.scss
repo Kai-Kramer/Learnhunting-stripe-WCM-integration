@@ -1,0 +1,49 @@
+.aside-menu-overlay {
+	@apply fixed left-0 top-0 z-[1200] h-full w-full -translate-x-full transform bg-foreground bg-opacity-70 opacity-0 transition-opacity;
+
+	&[data-active="true"] {
+		@apply translate-x-0 opacity-70;
+	}
+}
+
+.aside-menu {
+	@apply fixed left-0 top-0 z-[1300] flex h-full w-2/5 -translate-x-full transform flex-col bg-background transition;
+
+	&[data-active="true"] {
+		@apply translate-x-0;
+	}
+
+	min-width: 320px;
+
+	.menu-branding {
+		@apply p-4;
+	}
+
+	&__branding {
+		@apply bg-tertiary-dark p-0;
+	}
+
+	&__navigation {
+		@apply flex-grow overflow-auto pb-16;
+
+		@import "../includes/aside-menu";
+	}
+
+	&__secondary {
+		@apply bg-tertiary py-2 px-0;
+
+		nav {
+			@apply flex flex-row flex-wrap items-center;
+
+			a {
+				@apply block
+				w-full
+				px-4
+				py-4
+				font-bold
+				uppercase
+				text-stone-200;
+			}
+		}
+	}
+}

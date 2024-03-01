@@ -1,0 +1,57 @@
+.learnhunting-avatar-dropzone {
+	@apply mb-4
+    rounded
+    bg-stone-100
+    p-4;
+
+	&__dropzone {
+		@apply mb-4
+        cursor-pointer;
+	}
+
+	&__message {
+	}
+
+	&__name {
+		@apply mt-4
+        rounded
+        border
+        border-dashed
+        border-stone-400
+        p-4
+        transition-colors;
+	}
+	&__dropzone[data-active="true"] &__name {
+		@apply bg-stone-200;
+	}
+
+	&__error {
+		@apply mt-4
+        text-red-600;
+	}
+
+	&__actions {
+		@apply mt-4
+        flex
+        flex-col
+        gap-4
+        md:flex-row;
+
+		.link-button {
+			@apply m-0
+            flex
+            cursor-pointer
+            items-center
+            gap-2
+            rounded-full
+            bg-transparent
+            p-2
+            text-sm
+            font-normal
+            normal-case
+            text-foreground
+            hover:bg-transparent
+            hover:text-foreground;
+		}
+	}
+}

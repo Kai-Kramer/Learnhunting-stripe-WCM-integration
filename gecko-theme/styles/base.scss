@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "Bio Sans";
+	src: url("fonts/BioSans-Regular.woff2") format("woff2"),
+		url("fonts/BioSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Bio Sans";
+	src: url("fonts/BioSans-Light.woff2") format("woff2"),
+		url("fonts/BioSans-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Bio Sans";
+	src: url("fonts/BioSans-Bold.woff2") format("woff2"),
+		url("fonts/BioSans-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+$font-body: "Bio Sans", sans-serif;
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	@apply bg-tertiary;
+
+	font-family: $font-body;
+	font-size: 16px;
+
+	> main {
+		@apply bg-background text-foreground;
+	}
+}

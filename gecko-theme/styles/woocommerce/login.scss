@@ -1,0 +1,40 @@
+body.woocommerce-account .woocommerce {
+	.woocommerce-form-login {
+		@apply mx-auto
+            my-12
+            mb-16
+            max-w-xl
+            rounded-tr-none
+            rounded-tl-2xl
+            rounded-bl-none
+            rounded-br-2xl
+            border-none
+            bg-gray-light;
+
+		&__actions {
+			@apply mt-6
+                flex
+                items-center
+                gap-6;
+
+			.woocommerce-LostPassword {
+				@apply text-xs;
+			}
+		}
+
+		&__submit {
+			@apply float-none;
+		}
+	}
+
+	.woocommerce-form-row {
+		@apply m-0
+            mb-4;
+	}
+
+	.woocommerce-form__label-for-checkbox {
+		@apply flex
+            items-center
+            gap-2;
+	}
+}

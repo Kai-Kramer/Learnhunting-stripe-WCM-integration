@@ -1,0 +1,60 @@
+{
+	"version": 1,
+	"settings": {
+		"color": {
+			"custom": false,
+			"palette": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"color": "#ff6700"
+				},
+				{
+					"name": "Primary Dark",
+					"slug": "primary-dark",
+					"color": "#D95C07"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "#4E9997"
+				},
+				{
+					"name": "Secondary Dark",
+					"slug": "secondary-dark",
+					"color": "#3D7978"
+				},
+				{
+					"name": "Tertiary",
+					"slug": "tertiary",
+					"color": "#264748"
+				},
+				{
+					"name": "Tertiary Dark",
+					"slug": "tertiary-dark",
+					"color": "#1B3234"
+				},
+				{
+					"name": "Gray Light",
+					"slug": "gray-light",
+					"color": "#f6f6f6"
+				},
+				{
+					"name": "Gray Dark",
+					"slug": "gray-dark",
+					"color": "#e7e7e7"
+				},
+				{
+					"name": "Foreground",
+					"slug": "foreground",
+					"color": "#212121"
+				},
+				{
+					"name": "Background",
+					"slug": "background",
+					"color": "#fefefe"
+				}
+			]
+		}
+	}
+}

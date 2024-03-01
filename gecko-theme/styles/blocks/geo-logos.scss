@@ -1,0 +1,42 @@
+.gecko-geo-logos {
+	@apply inline-flex
+	items-center
+	gap-6
+	rounded-tl-3xl
+	rounded-br-3xl
+	bg-white
+	px-6
+	py-4
+	shadow-xl
+	sm:flex-wrap
+	md:py-5
+	lg:py-6;
+
+	&__logo {
+		@apply shrink-0;
+
+		img,
+		svg {
+			@apply m-0
+			block
+			h-8
+			w-auto
+			p-0
+			sm:h-10
+			md:h-12;
+		}
+	}
+
+	&[data-has-state-logo="true"] &__logo {
+		img,
+		svg {
+			@apply m-0
+			block
+			h-12
+			w-auto
+			p-0
+			sm:h-16
+			md:h-20;
+		}
+	}
+}

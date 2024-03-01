@@ -1,0 +1,53 @@
+.menu {
+	@apply flex flex-col m-0 p-0 h-full list-none;
+
+	// All menu items
+	.menu-item {
+		@apply relative flex flex-col w-full;
+
+		&:hover > .sub-menu {
+			@apply block;
+		}
+
+		a {
+			@apply transition;
+		}
+
+		&.current-menu-item > a {
+			@apply underline;
+		}
+	}
+
+	// Primary nav items
+	> .menu-item {
+		> a {
+			@apply flex px-4 py-3 font-bold uppercase text-xl;
+		}
+
+		&:hover > a,
+		&:active > a {
+		}
+	}
+
+	// Second level nav items
+	.sub-menu {
+		@apply flex flex-col pl-4;
+
+		min-width: 260px;
+
+		.sub-menu {
+			// @apply top-0 right-full;
+		}
+
+		.menu-item {
+			@apply block w-full;
+
+			> a {
+				@apply flex px-4 py-3;
+			}
+
+			&:hover > a {
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.gecko-agency-logo {
+	@apply w-full flex;
+
+	&__logo {
+		@apply shrink-0 w-auto;
+
+		img,
+		svg {
+			@apply block m-0 p-0 h-9 sm:h-12 md:h-16 w-auto;
+		}
+	}
+
+	&[data-style="fancy"] &__logo {
+		@apply px-6 py-4 md:py-5 lg:py-6 inline-block gap-6 bg-white rounded-tl-3xl rounded-br-3xl shadow-xl;
+	}
+
+	&[data-align="left"] &__logo {
+		@apply ml-0 mr-auto;
+	}
+	&[data-align="center"] &__logo {
+		@apply mx-auto;
+	}
+	&[data-align="right"] &__logo {
+		@apply ml-auto mr-0;
+	}
+}

@@ -1,0 +1,55 @@
+.menu {
+	@apply flex content-end m-0 mr-4 p-0 h-full list-none;
+
+	// All menu items
+	.menu-item {
+		@apply relative flex transition-all duration-500;
+
+		&:hover > .sub-menu {
+			@apply block;
+		}
+
+		a {
+			@apply transition;
+		}
+
+		&.current-menu-item > a {
+			@apply underline;
+		}
+	}
+
+	// Primary nav items
+	> .menu-item {
+		@apply content-center pt-2 pb-4 ml-2;
+
+		> a {
+			@apply flex flex-shrink-0 items-center content-center px-6 py-2 text-center text-white uppercase font-bold hover:bg-tertiary rounded-tl-3xl rounded-br-3xl;
+		}
+
+		&:hover > a {
+			@apply bg-tertiary;
+		}
+	}
+
+	// Second level nav items
+	.sub-menu {
+		@apply absolute z-10 top-[calc(100%-0.5rem)] right-0 hidden flex-col bg-tertiary rounded-tl-3xl rounded-br-3xl;
+
+		min-width: 260px;
+
+		.sub-menu {
+			@apply top-0 right-full;
+		}
+
+		.menu-item {
+			@apply block w-full;
+
+			> a {
+				@apply flex items-center content-center p-4 px-6 text-gray-light hover:text-gray-dark uppercase font-bold;
+			}
+
+			&:hover > a {
+			}
+		}
+	}
+}

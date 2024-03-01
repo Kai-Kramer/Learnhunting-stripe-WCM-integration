@@ -1,0 +1,119 @@
+body {
+	.gform_wrapper,
+	.gform_legacy_markup_wrapper {
+		@apply typography;
+
+		// Reset the prose list elements
+		ul ul {
+			@apply m-0 p-0;
+		}
+
+		ul li {
+			@apply m-0 p-0;
+
+			&::before {
+				content: none;
+			}
+		}
+		// End prose reset
+
+		.gform_fields,
+		.gform_fields.top-label,
+		.gform_fields.bottom-label {
+			@apply list-none;
+
+			.gfield {
+				@apply mb-6 w-full;
+
+				.gfield_label {
+					@apply block font-bold mb-0;
+				}
+
+				.ginput_container {
+					@apply w-full flex justify-start items-center gap-4 m-0 p-0;
+
+					[type="text"],
+					[type="email"],
+					[type="url"],
+					[type="password"],
+					[type="number"],
+					[type="date"],
+					[type="datetime-local"],
+					[type="month"],
+					[type="search"],
+					[type="tel"],
+					[type="time"],
+					[type="week"],
+					[multiple],
+					textarea,
+					select {
+						@apply m-0 w-full;
+
+						&.small {
+							@apply w-1/3;
+						}
+
+						&.medium {
+							@apply w-2/3;
+						}
+
+						&.large {
+							@apply w-full;
+						}
+					}
+				}
+
+				.ginput_container_name {
+					@apply justify-items-stretch;
+				}
+
+				.ginput_container_date {
+					@apply w-1/3;
+				}
+			}
+
+			.gfield_radio {
+				@apply flex justify-start items-center gap-4;
+			}
+
+			.ginput_complex,
+			.ginput_complex .clear-multi {
+				@apply flex flex-wrap justify-start items-center gap-x-6 gap-y-2;
+
+				span {
+					@apply flex-grow flex flex-col justify-start items-start;
+
+					input {
+						@apply flex-grow w-full;
+					}
+				}
+
+				.ginput_full {
+					@apply w-full;
+				}
+
+				.ginput_left,
+				.ginput_right {
+					@apply w-5/12;
+				}
+
+				.ginput_container {
+					@apply flex justify-start items-center gap-4;
+				}
+
+				.ginput_container_time {
+					@apply w-auto gap-x-6 gap-y-2;
+
+					input,
+					select {
+						@apply w-20;
+					}
+				}
+
+				.gf_clear {
+					@apply hidden;
+				}
+			}
+		}
+	}
+}
