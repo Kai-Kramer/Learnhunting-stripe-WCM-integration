@@ -446,17 +446,20 @@ add_action('woocommerce_thankyou', function($order_id) {
     require_once(__DIR__ . '/stripe-php-master/init.php');
     \Stripe\Stripe::setApiKey($stripe_secret_key); // Replace with your actual Stripe Secret Key
 
-    // Create a Checkout Session
-    $session = \Stripe\Checkout\Session::create([
+    $stripe_checkout_params = [
         'payment_method_types' => ['card'],
+        'payment_method_collection' => 'if_required',
         'line_items' => $line_items, // Make sure $line_items is populated
         'mode' => 'subscription',
         'success_url' => home_url('/my-account'), // Replace with your success URL
         'cancel_url' => home_url('/sign-up'),   // Replace with your cancel URL
-        'subscription_data' => [
-            'trial_period_days' => 30
-        ]        
-    ]);
+    ];
+
+    // add trial period to student memberships
+    if ($order_id === 303) $stripe_checkout_params['subscription_data'] = ['trial_period_days' => 30];
+
+    // Create a Checkout Session
+    $session = \Stripe\Checkout\Session::create($stripe_checkout_params);
 
     wc_setcookie( 'wc_stripe_payment_request_redirect_url', $session->url );
     
