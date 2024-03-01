@@ -453,6 +453,7 @@ add_action('woocommerce_thankyou', function($order_id) {
         'mode' => 'subscription',
         'success_url' => home_url('/my-account'), // Replace with your success URL
         'cancel_url' => home_url('/sign-up'),   // Replace with your cancel URL
+        'customer_email' => get_userdata($user_id)->user_email
     ];
 
     // add trial period to student memberships
